@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# Author - Mercy Akinwunmi
+
 def uppercase(str):
     """Print a string in uppercase."""
     for c in str:
