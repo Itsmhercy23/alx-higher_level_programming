@@ -7,6 +7,5 @@ def square_matrix_simple(matrix=[])
     for idx, row in enumerate(matrix):
         new_matrix[idx] =[]
         for col in row:
-            new_matrix[idx].append(col*col)
-
+            new_matrix[idx].append(col*col)  
     return [new_matrix[i] for i in range(0,n)]
