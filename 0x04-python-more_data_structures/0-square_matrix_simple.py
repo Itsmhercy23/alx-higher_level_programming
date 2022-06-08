@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-def square_matrix_simple(matrix=[]) 
-    
-    new_matrix = {}
-    n = len(matrix)
+def square_matrix_simple(matrix=[]):
+    new_matrix = matrix.copy()
 
-    for idx, row in enumerate(matrix):
-        new_matrix[idx] =[]
-        for col in row:
-            new_matrix[idx].append(col*col)  
-    return [new_matrix[i] for i in range(0,n)]
+    for i in range(len(matrix)):
+        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
+
+    return (new_matrix)
