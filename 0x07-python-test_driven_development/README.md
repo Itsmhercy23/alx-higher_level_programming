@@ -1,6 +1,6 @@
 # Python - Test-driven development
 
-In this project, I started practicing test-driven development using `docstring`
+I started practicing test-driven development using `docstring`in this project.
 and `unittest` in Python.
 
 ## Tests :heavy_check_mark:
