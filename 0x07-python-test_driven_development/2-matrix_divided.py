@@ -10,7 +10,7 @@ def matrix_divided(matrix, div):
     """ Function that divides the integer/float numbers of a matrix
 
     Args:
-        matrix: list of a lists of integers/floats
+        matrix: list of a lists of integers or floats
         div: number which divides the matrix
 
     Returns:
