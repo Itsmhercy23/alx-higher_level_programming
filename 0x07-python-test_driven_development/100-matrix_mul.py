@@ -42,10 +42,10 @@ def matrix_mul(m_a, m_b):
             raise TypeError("m_b must be a list of lists")
 
     if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
-        raise ValueError("m_a can't be empty")
+        raise ValueError("m_a can not be empty")
 
     if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
-        raise ValueError("m_b can't be empty")
+        raise ValueError("m_b can not be empty")
 
     for lists in m_a:
         for elems in lists:
