@@ -1,18 +1,15 @@
 #!/usr/bin/python3
-"""
-Contains the class BaseGeometry
-"""
+"""Add all arguments to a Python list and save them to a file."""
+import sys
 
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = \
+        __import__('6-load_from_json_file').load_from_json_file
 
-class BaseGeometry:
-    """A class with public instance methods area and integer_validator"""
-    def area(self):
-        """raises an exception when called"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """validates that value is an integer greater than 0"""
-        if type(value) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
+    try:
+        items = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        items = []
+    items.extend(sys.argv[1:])
+    save_to_json_file(items, "add_item.json")
